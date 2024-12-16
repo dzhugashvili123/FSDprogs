@@ -1,0 +1,10 @@
+MYDB2> db.createCollection("employees");
+MYDB2> db.employees.insertMany([{'id':111, 'name':'aaaa', 'salary':10000},{'id':222, 'name':'bbbb', 'salary':30000},{'id':333, 'name':'cccc', 'salary':20000},{'id':444, 'name':'dddd', 'salary':10000}])
+MYDB2> db.employees.find().pretty()
+MYDB2> db.employees.find().count()
+MYDB2> db.employees.find({salary:10000}).count()
+MYDB2> db.employees.find().pretty().limit(1)
+MYDB2> db.employees.find().pretty().limit(2)
+MYDB2> db.employees.find().pretty().skip(2)
+MYDB2> db.employees.find().pretty().sort({id:1})
+MYDB2> db.employees.find().pretty().sort({id:-1})
